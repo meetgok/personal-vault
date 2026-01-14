@@ -18,7 +18,8 @@
     "electron:dev": "cross-env IS_DEV=true electron .",
     "build": "vite build",
     "preview": "vite preview",
-    "electron:build": "vite build && electron-builder"
+    "clean": "rimraf dist release",
+    "electron:build": "npm run clean && vite build && electron-builder"
   },
   "build": {
     "appId": "com.meetgok.personalvault",
@@ -53,6 +54,7 @@
     "cross-env": "^7.0.3",
     "electron": "^28.0.0",
     "electron-builder": "^24.6.0",
+    "rimraf": "^6.1.2",
     "vite": "^5.0.0"
   }
 }
