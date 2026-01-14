@@ -1,5 +1,13 @@
 {
   "name": "personal-vault",
+  "description": "Personal Vault",
+  "author": "Mehmet Gök",
+  "license": "MIT",
+  "homepage": "https://github.com/meetgok/personal-vault",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meetgok/personal-vault.git"
+  },
   "private": true,
   "version": "1.0.0",
   "main": "electron/main.js",
@@ -11,6 +19,24 @@
     "build": "vite build",
     "preview": "vite preview",
     "electron:build": "vite build && electron-builder"
+  },
+  "build": {
+    "appId": "com.meetgok.personalvault",
+    "productName": "Personal Vault",
+    "directories": {
+      "output": "release/${version}"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": [
+        "dmg"
+      ]
+    }
   },
   "dependencies": {
     "keytar": "^7.9.0",
