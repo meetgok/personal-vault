@@ -70,6 +70,7 @@ typings/
 dist/
 build/
 out/
+release/
 
 # IDE files
 .vscode/
