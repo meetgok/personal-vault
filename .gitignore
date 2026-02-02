@@ -70,7 +70,9 @@ typings/
 dist/
 build/
 out/
-release/
+release*/
+.npm_local/
+.tmp_local/
 
 # IDE files
 .vscode/
@@ -87,3 +89,14 @@ vault.json
 
 # Vite specific
 .vite/
+
+# Android specific
+android/app/build/
+android/.gradle/
+android/local.properties
+android/capacitor-cordova-android-plugins/build/
+
+# Sync Host specific
+# Sync Host specific
+sync-host/data/
+sync-host/public/
